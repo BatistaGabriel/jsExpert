@@ -23,4 +23,24 @@ describe('API Suite Test', () =>{
             assert.deepStrictEqual(response.text, 'You Rebel Scum!')
         })
     })
+
+    describe('/login', () =>{
+        it('should perform login successfully and return HTTP Status 200', 
+        async()=>{
+            const response = await request(app)
+                        .post('/login')
+                        .send({username: "Darth", "password": "123"})
+                        .expect(200)
+            assert.deepStrictEqual(response.text, 'You are logged in sir!')
+        })
+
+        it('should not perform the login with incorrect credentials and return HTTP Status 401', 
+        async()=>{
+            const response = await request(app)
+                        .post('/login')
+                        .send({username: "Luke", "password": "Sky123"})
+                        .expect(401)
+            assert.deepStrictEqual(response.text, 'Invalid Credentials!')
+        })
+    })
 })
