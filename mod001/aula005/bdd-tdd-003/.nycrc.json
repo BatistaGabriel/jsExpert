@@ -1,0 +1,16 @@
+{
+    "branches": 100,
+    "functions": 100,
+    "lines": 100,
+    "statements": 100,
+    "check-coverage": true,
+    "reporter": [
+        "lcov",
+        "text",
+        "text-summary",
+        "html"
+    ],
+    "exclude": [
+        "**/src/repository/base/*.js"
+    ]
+}

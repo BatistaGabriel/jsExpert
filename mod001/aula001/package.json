@@ -1,0 +1,15 @@
+{
+  "name": "aula001",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.test.js"
+  },
+  "engines": {
+    "node": "v18.14.2"
+  },
+  "keywords": [],
+  "author": "Gabriel Batista",
+  "license": "ISC"
+}
